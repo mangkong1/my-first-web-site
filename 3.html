@@ -3,18 +3,18 @@
 <head>
   <tilte>WEB1 - Javascript</tilte>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js">
+  </script>
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input type="button" value="night" onclick="
-  document.querySelector('body').style.backgroundColor ='black';
-  document.querySelector('body').style.color='white'; ">
-  <input type="button" value="day" onclick="
-  document.querySelector('body').style.backgroundColor ='white'; 
-  document.querySelector('body').style.color='black'; ">
-  
+
+  <input id="night_day" type="button" value="night" onclick="nightdayHandler(this);
+  ">
+
   <div id="grid">
   <ol>
     <li><a href="1.html">HTML</a></li>
@@ -29,6 +29,30 @@
 
       JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
       </p>
+
+      <input type="button" value="night" onclick="
+      if (this.value==='night') {
+        document.querySelector('body').style.backgroundColor ='black';
+        document.querySelector('body').style.color='white'; 
+        this.value='day'
+      } 
+      else {
+        document.querySelector('body').style.backgroundColor ='white'; 
+        document.querySelector('body').style.color='black';
+        this.value='night'
+      }">
+      <input type="button" value="night" onclick="
+      if (this.value==='night') {
+        document.querySelector('body').style.backgroundColor ='black';
+        document.querySelector('body').style.color='white'; 
+        this.value='day'
+      } 
+      else {
+        document.querySelector('body').style.backgroundColor ='white'; 
+        document.querySelector('body').style.color='black';
+        this.value='night'
+      }">
+    
     </div>
   </div>    
   </body>
